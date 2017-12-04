@@ -9,7 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
 		<link rel="shortcut icon" type="image/png" href="https://res.cloudinary.com/bijancot/image/upload/q_auto:low/v1502101962/BC_p0tdll.png"/>
 	</head>
-    <body>
+	<body>
 		<div class="container" ng-app="bijancot_api" ng-controller="bijancot_post_it" ng-init="displayit()">
 			<div class="center">
 			<h1 class="tit">BijanCot !!</h1>
@@ -31,28 +31,7 @@
             </div>
             <h3 class="tit center">Our Portofolio</h3>
             	<p class="center sub">Our recent project</p>
-            	<div class="show-on-med-and-down hide-on-med-and-up" id="portofolio">
-            	<div class="row left mains">
-            		<div class="col s12 m12 l4 bor" ng-repeat="x in names">          
-            			<div class="card">
-	            				<div class="card-image">
-					              <img src="{{x.portofolio_foto}}">
-					            </div>
-					            <div class="card-content">
-					            <span class="card-title black-text tit"><strong><a class="black-text" href="https://antirayapmalang.com">{{x.portofolio_title}}</a></strong></span>
-					              <p>{{x.short_description}}
-					              <br/>
-                                    <p>{{x.spesification}}</p>
-                                  </p>
-					            </div>
-					            <div class="card-action">
-					              <a href="{{x.portofolio_link}}" class="black-text link">Go To Website >></a>
-					            </div>
-				         </div>
-          			</div>
-            	</div>
-            	</div>
-				<div class="show-on-med-and-up hide-on-small-only" id="portofolio">
+            	<div class="show-on-med-and-up hide-on-small-only" id="portofolio" >
 					<div class="row left mains">
             		<div class="col s4 m4 l4 bor" ng-repeat="x in names">          
             			<div class="card">
@@ -61,13 +40,18 @@
 					            </div>
 					            <div class="card-content">
 					            <span class="card-title black-text tit"><strong><a class="black-text" href="https://antirayapmalang.com">{{x.portofolio_title}}</a></strong></span>
-					              <p>{{x.short_description}}
-                                  <br/>
-                                    <p class="koclo">{{x.spesification}}</p>
+					              <p>Website Company Profile Anti Rayap Malang.
+					              <ul>
+					              	<li>HTML5</li>
+					              	<li>Mareialize css</li>
+					              	<li>Responsive</li>
+					              	<li>Mobile Friendly</li>
+					              	<li>SEO friendly</li>
+					              </ul>
 					              </p>
 					            </div>
 					            <div class="card-action">
-					              <a href="{{x.portofolio_link}}" class="black-text link">Go To Website >></a>
+					              <a href="http://antirayapmalang.com" class="black-text link">Go To Website >></a>
 					            </div>
 				         </div>
           			</div>
@@ -225,7 +209,7 @@
     var application = angular.module("bijancot_api",[]);
     application.controller("bijancot_post_it", function ($scope,$http) {
         $scope.displayit =function(){
-            $http.get("http://endang.endut.ga/select.php").then(function(data){
+            $http.get("http://localhost/rest-api/select.php").then(function(data){
                 $scope.names=data.data;
             })
         }
