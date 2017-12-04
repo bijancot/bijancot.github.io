@@ -225,7 +225,7 @@
     var application = angular.module("bijancot_api",[]);
     application.controller("bijancot_post_it", function ($scope,$http) {
         $scope.displayit =function(){
-            $http.get("http://endang1.endut.ga/select.php").then(function(data){
+            $http.get("https://api.myjson.com/bins/eck73").then(function(data){
                 $scope.names=data.data;
             })
         }
