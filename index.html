@@ -241,7 +241,7 @@
 
     application.controller("bijancot_post_it", function ($scope,$http) {
         $scope.displayit =function(){
-            $http.get("http://endang.endut.ga/select.php").then(function(data){
+            $http.get("https://endang.endut.ga/select.php").then(function(data){
                 $scope.names=data.data;
             })
         }
