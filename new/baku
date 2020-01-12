@@ -1,0 +1,6 @@
+ <ul class="wolow is-size-3 has-text-white">
+                                <li><a href="#about" class="has-text-white">About me</a></li>
+                                <li><a href="#about" class="has-text-white">Portofolio</a></li>
+                                <li><a href="#about" class="has-text-white">Blog</a></li>
+                                <li><a href="#about" class="has-text-white">Resume</a></li>
+                            </ul> 
