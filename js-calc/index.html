@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
+</head>
+<style>
+    #test4,#test3,#test2,#test1{
+        display: none;
+    }
+    #yo:hover{
+        color:red;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <form>
+        <div id="pakker">
+            <input type="checkbox" value="39" id="test1"/><label for="test1" id="yo">100 kata - Rp 2000</label><br/>
+            <input type="checkbox" value="79" id="test2"/><label for="test2" id="yo">140 kata - Rp 2500</label><br/>
+            <input type="checkbox" value="29" id="test3"/><label for="test3" id="yo">300 kata - Rp 5000</label><br/>
+            <input type="checkbox" value="49" id="test4"/><label for="test4" id="yo">1000 kata - Rp 20000</label><br/>
+        </div>
+        <br/>
+        <h5>Hasil</h5>
+        <div id='sum'></div>   
+        <input type="reset" id="resett">
+    </form> 
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        var sum = 0;
+        $('#pakker :checkbox').click(function() {
+            sum = 0;
+            $('#pakker :checkbox:checked').each(function(idx, elm) {
+                sum += parseInt(elm.value, 10);
+            });
+            
+            $('#sum').html(sum);
+        
+        });
+        
+    }); 
+    
+    $("#resett").bind("click", (function () {
+        $('#sum').html("0");
+    }));
+    </script>
+</html>
