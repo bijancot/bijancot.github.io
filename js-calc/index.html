@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
 </head>
 <style>
-    #test4,#test3,#test2,#test1{
-        display: none;
-    }
-    #yo:hover{
+    #yo:hover,#yo1:hover{
         color:red;
         cursor: pointer;
     }
     input[type=checkbox]:checked + label {
         font-weight: bold;
+    }
+    input[type=checkbox] {
+        display: none;
+    }
+    .card-footer-item {
+        color: currentColor;
+        cursor: not-allowed;
+        color:black;
+        text-decoration: none;
     }
 </style>
 <body>
@@ -31,20 +37,63 @@
                         <div class="card-content">
                             
                                 <h2 class="title">“The Calcolator”</h2>
-                            
-                            <form>
-                                <div id="pakker">
-                                    <input type="checkbox" value="2000" id="test1"/><label id="yo" for="test1">100 kata - Rp 2000</label><br/>
-                                    <input type="checkbox" value="2500" id="test2"/><label id="yo" for="test2">140 kata - Rp 2500</label><br/>
-                                    <input type="checkbox" value="5000" id="test3"/><label id="yo" for="test3">300 kata - Rp 5000</label><br/>
-                                    <input type="checkbox" value="20000" id="test4"/><label id="yo" for="test4">1000 kata - Rp 20000</label><br/>
-                                </div>
-                                <br/>
-                                <h5>Hasil</h5>
-                                <div id='sum'></div>   
-                                <input type="reset" id="resett">
-                            </form> 
+                                <form>
+                                    <div class="tile is-ancestor">
+                                        <div class="tile is-parent">
+                                            <div class="tile is-child box notification is-success">
+                                              <p class="subtitle">Artikel Indonesia</p>
+                                                <!-- <h4><strong>Artikel Indonesia</strong></h4> -->
+                                            <div id="pakker">
+                                                <input type="checkbox" value="2500" id="id-100"/><label id="yo" for="id-100">100 kata - Rp 2500</label><br/>
+                                                <input type="checkbox" value="5000" id="id-200"/><label id="yo" for="id-200">200 kata - Rp 5000</label><br/>
+                                                <input type="checkbox" value="7000" id="id-300"/><label id="yo" for="id-300">300 kata - Rp 7000</label><br/>
+                                                <input type="checkbox" value="9000" id="id-400"/><label id="yo" for="id-400">400 kata - Rp 9000</label><br/>
+                                                <input type="checkbox" value="10000" id="id-500"/><label id="yo" for="id-500">500 kata - Rp 10000</label><br/>
+                                                <input type="checkbox" value="11500" id="id-600"/><label id="yo" for="id-600">600 kata - Rp 11500</label><br/>
+                                                <input type="checkbox" value="13000" id="id-700"/><label id="yo" for="id-700">700 kata - Rp 13000</label><br/>
+                                                <input type="checkbox" value="14500" id="id-800"/><label id="yo" for="id-800">800 kata - Rp 14500</label><br/>
+                                                <input type="checkbox" value="16000" id="id-900"/><label id="yo" for="id-900">900 kata - Rp 16000</label><br/>
+                                                <input type="checkbox" value="17500" id="id-1000"/><label id="yo" for="id-1000">1000 kata - Rp 17500</label><br/>
+                                            </div>
+                                            <br/>
+                                            
+                                            </div>
+                                          </div>
+                                        <div class="tile is-6 is-vertical is-parent ">
+                                          <div class="tile is-child box notification is-warning">
+                                            <p class="subtitle">Artikel English</p>
+                                            <!-- <h4><strong>Artikel English</strong></h4> -->
+                                            <div id="pakker1">
+                                                <input type="checkbox" value="3500" id="en-100"/><label id="yo1" for="en-100">100 kata - Rp 3500</label><br/>
+                                                <input type="checkbox" value="7000" id="en-200"/><label id="yo1" for="en-200">200 kata - Rp 7000</label><br/>
+                                                <input type="checkbox" value="10000" id="en-300"/><label id="yo1" for="en-300">300 kata - Rp 10000</label><br/>
+                                                <input type="checkbox" value="12000" id="en-400"/><label id="yo1" for="en-400">400 kata - Rp 12000</label><br/>
+                                                <input type="checkbox" value="14000" id="en-500"/><label id="yo1" for="en-500">500 kata - Rp 14000</label><br/>
+                                            </div>
+                                            <br/>
+                                          </div>
+                                          <div class="tile is-child box notification is-info">
+                                            <p><em><strong><u>Cara menggunanakan :</u></strong> Klik paket yang anda inginkan di daftar kemudian harga akan muncul dibagian bawah. Untuk membatalkan klik tombol <strong>Reset</strong></em></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <!-- <div id="sumall"></div> -->
+                                    <input class="button is-link" type="reset" id="resett">
+                                </form>
                         </div>
+                        <footer class="card-footer">
+                            <!-- <span>
+                                <h5>Sub-total ID</h5>
+                                <div id='sum'></div>
+                            </span> -->
+                            <a href="#" class="card-footer-item">Sub-total ID &nbsp;&nbsp;&nbsp;Rp&nbsp;&nbsp;<div id='sum'></div></a>
+                            <a href="#" class="card-footer-item">Sub-total EN &nbsp;&nbsp;&nbsp;Rp&nbsp;&nbsp;<div id='sum1'></div></a>
+                                <!-- <h5>Sub-total EN</h5>
+                                <div id='sum1'></div> -->
+                        </footer>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">TOTAL &nbsp;&nbsp;Rp&nbsp;&nbsp;<div id="sumall"></div></a>
+                        </footer>
                     </div>
                 </div>
                 <div class="column is-one-quarter">
@@ -65,14 +114,32 @@
                 sum += parseInt(elm.value, 10);
                 
             });
-            $('#sum').html(sum);
+            $('#sum').html(sum.toLocaleString());
+            var sumi = sum1+sum;
+            $('#sumall').html(sumi.toLocaleString());
 
         });
+        var sum1 = 0;
+        $('#sum1').html(sum1);
+        $('#pakker1 :checkbox').click(function() {
+            sum1 = 0;
+            $('#pakker1 :checkbox:checked').each(function(idx, elm) {
+                sum1 += parseInt(elm.value, 10);
+                
+            });
+            $('#sum1').html(sum1.toLocaleString());
+            var sumi = sum1+sum;
+            $('#sumall').html(sumi.toLocaleString());
+        });
+        $('#sumall').html(sum1+sum);
     }); 
     
     $("#resett").bind("click", (function () {
         $("#yo").removeAttr('checked');
+        $("#yo1").removeAttr('checked');
         $('#sum').html("0");
+        $('#sum1').html("0");
+        $('#sumall').html("0");
     }));
     </script>
 </html>
