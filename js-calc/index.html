@@ -15,20 +15,44 @@
         color:red;
         cursor: pointer;
     }
+    input[type=checkbox]:checked + label {
+        font-weight: bold;
+    }
 </style>
 <body>
-    <form>
-        <div id="pakker">
-            <input type="checkbox" value="2000" id="test1"/><label for="test1" id="yo">100 kata - Rp 2000</label><br/>
-            <input type="checkbox" value="2500" id="test2"/><label for="test2" id="yo">140 kata - Rp 2500</label><br/>
-            <input type="checkbox" value="5000" id="test3"/><label for="test3" id="yo">300 kata - Rp 5000</label><br/>
-            <input type="checkbox" value="20000" id="test4"/><label for="test4" id="yo">1000 kata - Rp 20000</label><br/>
+    <section class="hero is-medium">
+        <div class="hero-body">
+          <div class="container">
+              <div class="columns">
+                <div class="column is-one-quarter">
+                </div>
+                <div class="column">
+                    <div class="card" style="border-radius:10px">
+                        <div class="card-content">
+                            
+                                <h2 class="title">“The Calcolator”</h2>
+                            
+                            <form>
+                                <div id="pakker">
+                                    <input type="checkbox" value="2000" id="test1"/><label id="yo" for="test1">100 kata - Rp 2000</label><br/>
+                                    <input type="checkbox" value="2500" id="test2"/><label id="yo" for="test2">140 kata - Rp 2500</label><br/>
+                                    <input type="checkbox" value="5000" id="test3"/><label id="yo" for="test3">300 kata - Rp 5000</label><br/>
+                                    <input type="checkbox" value="20000" id="test4"/><label id="yo" for="test4">1000 kata - Rp 20000</label><br/>
+                                </div>
+                                <br/>
+                                <h5>Hasil</h5>
+                                <div id='sum'></div>   
+                                <input type="reset" id="resett">
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                </div>
+              </div>
+          </div>
         </div>
-        <br/>
-        <h5>Hasil</h5>
-        <div id='sum'></div>   
-        <input type="reset" id="resett">
-    </form> 
+      </section>
 </body>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script>
@@ -39,12 +63,11 @@
             sum = 0;
             $('#pakker :checkbox:checked').each(function(idx, elm) {
                 sum += parseInt(elm.value, 10);
+                
             });
-            
             $('#sum').html(sum);
-        
+
         });
-        
     }); 
     
     $("#resett").bind("click", (function () {
