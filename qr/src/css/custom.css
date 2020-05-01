@@ -1,7 +1,7 @@
 .footermenu {
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 0vh;
     width: 100%;
     background-color: red;
     color: white;
@@ -22,4 +22,17 @@
  .sambung{
      min-height: 10vh;
      background-color: #0099ff;
+ }
+
+ .footas {
+    position: fixed;
+    left: 0;
+    bottom: 20vh;
+    width: 100%;
+    text-align: center;
+    min-height: 6vh;
+ }
+
+ .firsthome{
+     min-height: 20vh;
  }
