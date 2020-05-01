@@ -13,3 +13,8 @@
     min-height: 100vh;
     min-height: -webkit-fill-available;
 }
+
+.headsom{
+    background-color: #0099ff;
+    min-height: 15vh;
+}
