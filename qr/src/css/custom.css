@@ -6,7 +6,6 @@
     background-color: red;
     color: white;
     text-align: center;
-    min-height: 6vh;
  }
 
  .headsom {
@@ -26,8 +25,9 @@
 
  .footas {
     position: fixed;
+    float: right;
     left: 0;
-    bottom: 10vh;
+    bottom: 5vh;
     width: 100%;
     text-align: center;
     min-height: 6vh;
@@ -35,4 +35,20 @@
 
  .firsthome{
      min-height: 20vh;
+ }
+
+ .footsom {
+    position: fixed;
+    z-index:-1; 
+    left: 0;
+    bottom: -4vh;
+    width: 100%;
+    color: white;
+    text-align: center;
+ }
+ 
+ .bottomsvg{
+    margin-bottom: -2vh;
+    z-index:-1; 
+    position: relative;
  }
