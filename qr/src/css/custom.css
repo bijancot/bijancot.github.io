@@ -6,15 +6,20 @@
     background-color: red;
     color: white;
     text-align: center;
-    min-height: 7vh;
+    min-height: 6vh;
  }
 
-.mainbody{
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-}
+ .headsom {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    min-height: 70vh;
+ }
 
-.headsom{
-    background-color: #0099ff;
-    min-height: 15vh;
-}
+ .sambung{
+     min-height: 10vh;
+     background-color: #0099ff;
+ }
