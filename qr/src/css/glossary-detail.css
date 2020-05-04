@@ -16,3 +16,19 @@
 .card-footer-item{
     margin-bottom: 0px !important;
 }
+
+.glossary-sub{
+    padding:2vh
+}
+
+.det{
+    margin-bottom: 0.6vh !important;
+}
+
+.det-up{
+    margin-top:0.5vh;
+}
+
+.end{
+    margin-bottom: 5vh;
+}
