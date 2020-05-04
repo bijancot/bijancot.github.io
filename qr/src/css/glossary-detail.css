@@ -8,3 +8,11 @@
 .glossary-product-desc{
     font-size: 0.8em;
 }
+
+.glossary-detail{
+    font-size: 0.8em;
+    padding-bottom: 0px;
+}
+.card-footer-item{
+    margin-bottom: 0px !important;
+}
