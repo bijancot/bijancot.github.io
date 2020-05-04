@@ -7,5 +7,27 @@
     color: black;
     text-align: center;
     min-height: 6vh;
+    padding-top: 1vh;
     box-shadow: 0px 4px 3px #d3d3d3, 0px -4px 3px #d3d3d3;
  }
+ .headermenu {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0vh;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    min-height: 8vh;
+    padding-top: 2.5vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+    box-shadow: 0px 4px 3px #d3d3d3, 0px -4px 3px #d3d3d3;
+ }
+
+.home-button{
+    font-weight: bold;
+    font-size: 1.6em;
+    color:#000000;
+}
