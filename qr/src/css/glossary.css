@@ -3,7 +3,7 @@
     padding-left: 2vh;
     padding-right: 2vh;
 }
-.column.is-2.content{
+.column.is-2.content,.column.is-3.content,.column.is-4.content{
     margin-bottom: 0vh;
     padding : 1vh 1vh 1vh 1vh;
     text-align: center;
