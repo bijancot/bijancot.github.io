@@ -13,7 +13,8 @@
     <link rel="preload" href="../src/css/glossary.css" as="style">
     <link rel="preload" href="../src/font/css/all.min.css" as="style">
     <link rel="preload" href="../src/font/css/solid.min.css" as="style">
-    <link rel="preload" href="../src/js/cordova.js" as="script">
+    <!-- <link rel="preload" href="../src/js/cordova.js" as="script"> -->
+    <script src="cordova.js"></script> 
 
     <link rel='stylesheet' type='text/css' media='screen' href='../src/bulma-0.8.2/css/bulma.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../src/bulma-0.8.2/css/bulma.min.css'>
@@ -25,7 +26,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../src/font/css/solid.min.css'>
 </head>
 
-<body class="mainbody">
+<body class="mainbody" onload="onLoad()">
   <!-- <div class="headsom">
     <div class="sambung"></div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L10,165.3C20,139,40,85,60,96C80,107,100,181,120,224C140,267,160,277,180,282.7C200,288,220,288,240,256C260,224,280,160,300,154.7C320,149,340,203,360,208C380,213,400,171,420,181.3C440,192,460,256,480,288C500,320,520,320,540,304C560,288,580,256,600,250.7C620,245,640,267,660,261.3C680,256,700,224,720,186.7C740,149,760,107,780,80C800,53,820,43,840,37.3C860,32,880,32,900,64C920,96,940,160,960,202.7C980,245,1000,267,1020,250.7C1040,235,1060,181,1080,170.7C1100,160,1120,192,1140,218.7C1160,245,1180,267,1200,266.7C1220,267,1240,245,1260,245.3C1280,245,1300,267,1320,282.7C1340,299,1360,309,1380,293.3C1400,277,1420,235,1430,213.3L1440,192L1440,0L1430,0C1420,0,1400,0,1380,0C1360,0,1340,0,1320,0C1300,0,1280,0,1260,0C1240,0,1220,0,1200,0C1180,0,1160,0,1140,0C1120,0,1100,0,1080,0C1060,0,1040,0,1020,0C1000,0,980,0,960,0C940,0,920,0,900,0C880,0,860,0,840,0C820,0,800,0,780,0C760,0,740,0,720,0C700,0,680,0,660,0C640,0,620,0,600,0C580,0,560,0,540,0C520,0,500,0,480,0C460,0,440,0,420,0C400,0,380,0,360,0C340,0,320,0,300,0C280,0,260,0,240,0C220,0,200,0,180,0C160,0,140,0,120,0C100,0,80,0,60,0C40,0,20,0,10,0L0,0Z"></path></svg>
@@ -127,7 +128,7 @@
         <a href="../index.html"><i class="fas fa-home home-button"></i></a>
       </div>
       <div class="level-item has-text-centered">
-        <a href=”#” onclick='exitFromApp()' class="exit-button"><i class="fas fa-door-open"></i></a>
+        <a href='javascript:void(0);' onclick='exitFromApp()' class="exit-button"><i class="fas fa-door-open"></i></a>
       </div>
     </nav>
   </div>
@@ -135,16 +136,19 @@
   <script src="../src/js/cordova.js" defer></script>
 
   <script>
-    function exitFromApp(){
-    var x = confirm('Yakin Keluar ?');
-    if( x == true ){
+ 
+function onLoad()
+{
+      document.addEventListener("deviceready", onDeviceReady, true);
+}
+
+function exitFromApp()
+ {
     navigator.app.exitApp();
-    return true;
-    }else{
-    return false;
-    }
-  }
+ }
+
 </script>
+
 </body>
 
 </html>
