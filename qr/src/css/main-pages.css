@@ -42,3 +42,12 @@
     margin-bottom: -2vh;z-index:-1; 
     position: relative;
  }
+
+.icon-tit{
+    font-size: 3.5em;
+    margin-bottom:-0.69rem !important;
+}
+
+.icon-content{
+    text-align: center;
+}
