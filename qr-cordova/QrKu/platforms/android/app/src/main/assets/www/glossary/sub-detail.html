@@ -6,6 +6,15 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+    <!-- preload -->
+    <link rel="preload" href="../src/bulma-0.8.2/css/bulma.min.css" as="style">
+    <link rel="preload" href="../src/css/sub-pages.css" as="style">
+    <link rel="preload" href="../src/css/glossary.css" as="style">
+    <link rel="preload" href="../src/font/css/all.min.css" as="style">
+    <link rel="preload" href="../src/font/css/solid.min.css" as="style">
+    <link rel="preload" href="../src/js/cordova.js" as="script">
+
     <link rel='stylesheet' type='text/css' media='screen' href='../src/bulma-0.8.2/css/bulma.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../src/bulma-0.8.2/css/bulma.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../src/bulma-0.8.2/css/bulma-divider.min.css'>
@@ -118,10 +127,24 @@
         <a href="../index.html"><i class="fas fa-home home-button"></i></a>
       </div>
       <div class="level-item has-text-centered">
-        
+        <a href=”#” onclick='exitFromApp()' class="exit-button"><i class="fas fa-door-open"></i></a>
       </div>
     </nav>
   </div>
+
+  <script src="../src/js/cordova.js" defer></script>
+
+  <script>
+    function exitFromApp(){
+    var x = confirm('Yakin Keluar ?');
+    if( x == true ){
+    navigator.app.exitApp();
+    return true;
+    }else{
+    return false;
+    }
+  }
+</script>
 </body>
 
 </html>

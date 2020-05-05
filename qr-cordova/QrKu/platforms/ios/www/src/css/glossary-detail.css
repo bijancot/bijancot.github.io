@@ -1,0 +1,34 @@
+.glossary-product-title{
+    font-weight: 600;
+    font-size: 1em;
+}
+.glossary-product{
+    text-align: left !important;
+}
+.glossary-product-desc{
+    font-size: 0.8em;
+}
+
+.glossary-detail{
+    font-size: 0.8em;
+    padding-bottom: 0px;
+}
+.card-footer-item{
+    margin-bottom: 0px !important;
+}
+
+.glossary-sub{
+    padding:2vh
+}
+
+.det{
+    margin-bottom: 0.6vh !important;
+}
+
+.det-up{
+    margin-top:0.5vh;
+}
+
+.end{
+    margin-bottom: 5vh;
+}

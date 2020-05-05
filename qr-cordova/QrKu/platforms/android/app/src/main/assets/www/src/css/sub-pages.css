@@ -36,6 +36,11 @@
     font-size: 1em;
     color:#000000;
 }
+.exit-button{
+    font-weight: bold;
+    font-size: 1em;
+    color:#000000;
+}
 .level-asd{
     margin-right:0px !important;
 }
